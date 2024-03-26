@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+    <title>Read & Listen Quran Online Para 1 to 30</title>
+  </head>
+  <body>
+    <div class="lg:content-auto"></div>
+
+    <!-- ------------------------------------------------------------- -->
+    <nav class="bg-gray-800">
+      <div class="mx-auto max-w-7xl px-3 sm:px-6 lg:px-8">
+        <div class="relative flex h-16 items-center justify-between">
+          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+            <!-- Mobile menu button-->
+            <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+              <span class="absolute -inset-0.5"></span>
+              <span class="sr-only">Open main menu</span>
+              <!--
+                Icon when menu is closed.
+    
+                Menu open: "hidden", Menu closed: "block"
+              -->
+              <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+              <!--
+                Icon when menu is open.
+    
+                Menu open: "block", Menu closed: "hidden"
+              -->
+              <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+            <svg height="30" width="100" xmlns="http://www.w3.org/2000/svg">
+              <image x="-20" y="-15" width="100" height="80" href="logo.png"/>
+            </svg> 
+            <div class="hidden sm:ml-4 sm:block">
+              <div class="flex space-x-10">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <a href="#" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Dashboard</a>
+                <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Team</a>
+                <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Projects</a>
+                <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Calendar</a>
+              </div>
+            </div>
+          </div>
+          <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+            <button type="button" class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+              <span class="absolute -inset-1.5"></span>
+              <span class="sr-only">View notifications</span>
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+              </svg>
+            </button>
+    
+            <!-- Profile dropdown -->
+            <div class="relative ml-3">
+              <div>
+                <button type="button" class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                  <span class="absolute -inset-1.5"></span>
+                  <span class="sr-only">Open user menu</span>
+                  <img class="h-8 w-8 rounded-full" src="https://source.unsplash.com/200x200/?islamic" alt="">
+                </button>
+              </div>
+    
+              <!--
+                Dropdown menu, show/hide based on menu state.
+    
+                Entering: "transition ease-out duration-100"
+                  From: "transform opacity-0 scale-95"
+                  To: "transform opacity-100 scale-100"
+                Leaving: "transition ease-in duration-75"
+                  From: "transform opacity-100 scale-100"
+                  To: "transform opacity-0 scale-95"
+              -->
+                </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Mobile menu, show/hide based on menu state. -->
+      <div class="sm:hidden" id="mobile-menu">
+        <div class="space-y-1 px-2 pb-3 pt-2">
+          <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+          <a href="#" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Dashboard</a>
+          <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Discover</a>
+          <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">like</a>
+          <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Calendar</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ------------------------------------------------------------- -->
+
+    <section class="text-gray-600 body-font">
+      <div class="container mx-auto flex px-1 py-4 items-center justify-center flex-col">
+        <div>
+          <img src="bg1.jpg" width="1200" alt="">
+        </div>
+        <br>
+           <div class="text-center lg:w-5/3 w-full">
+            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Read & Listen Quran Online Para 1 to 30</h1>
+          <p class="mb-8 leading-relaxed">The Holy Quran is the matchless Kalaam of that Lord. Who is the only Deity the only Creator and the real Lord of the entire universe. He عَزَّوَجَلَّ revealed this Kalaam [Holy Quran] to the Holy Prophet صَلَّى اللهُ عَلَيْهِ وَاٰلِهٖ وَسَلَّم . The blessed revelation began in the sacred month of Ramadan. Sayyiduna Jibraeel عَـلَيْـهِ الـسَّـلاَم had the privilege of bringing the revelation to the Holy Prophet صَلَّى اللهُ عَلَيْهِ وَاٰلِهٖ وَسَلَّم . Some blessed ayahs were bestowed upon him directly. The divine revelation was revealed in stages over a period of about 23 years in Arabic language. The most eloquent language, according to circumstances and occurrences.</p>
+          <div class="flex justify-center">
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- ------------------------------------1------------------------------------------ -->
+    <hr>
+    <section class="text-gray-600 body-font">
+      <div class="container mx-auto flex px-1 py-10 items-center justify-center flex-col">
+        <u><h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Read & Listen Quran Online Para 1 </h1></u>
+        <div>
+          
+          <iframe width="1250" height="600" src="https://www.youtube-nocookie.com/embed/yu5I6JjbUIs?si=BYQUc00lKDRJ2k1l" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        
+        <!-- ------------------------------------2------------------------------------------ -->
+
+        <hr>
+        <section class="text-gray-600 body-font">
+          <div class="container mx-auto flex px-1 py-10 items-center justify-center flex-col">
+           <u><h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Read & Listen Quran Online Para 2 </h1></u>
+            <div>
+              <iframe width="1250" height="600" src="https://www.youtube-nocookie.com/embed/V8aHpIyvZ5s?si=yWCzOB9kFJcuKXcT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            </div>
+            
+            <!-- ------------------------------------3------------------------------------------ -->
+
+        <hr>
+        <section class="text-gray-600 body-font">
+          <div class="container mx-auto flex px-1 py-10 items-center justify-center flex-col">
+           <u><h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Read & Listen Quran Online Para 3 </h1></u>
+            <div>
+              <iframe width="1250" height="600" src="https://www.youtube-nocookie.com/embed/g2wvMtXnnT0?si=rxGiPveuEENE53KV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            </div>
+
+            <!-- ------------------------------------4------------------------------------------ -->
+
+        <hr>
+        <section class="text-gray-600 body-font">
+          <div class="container mx-auto flex px-1 py-10 items-center justify-center flex-col">
+           <u><h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Read & Listen Quran Online Para 4 </h1></u>
+            <div>
+            <video src="4.mp4" width="1200" controls></video></video>
+            </div>
+        
+            <!-- ------------------------------------5------------------------------------------ -->
+
+        <hr>
+        <section class="text-gray-600 body-font">
+          <div class="container mx-auto flex px-1 py-10 items-center justify-center flex-col">
+           <u><h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Read & Listen Quran Online Para 5 </h1></u>
+            <div>
+            <video src="5.mp4" width="1200" controls></video></video>
+            </div>
+
+            <!-- ------------------------------------6------------------------------------------ -->
+
+        <hr>
+        <section class="text-gray-600 body-font">
+          <div class="container mx-auto flex px-1 py-10 items-center justify-center flex-col">
+           <u><h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Read & Listen Quran Online Para 6 </h1></u>
+            <div>
+            <video src="6.mp4" width="1200" controls></video></video>
+            </div>
+
+            <!-- ------------------------------------7------------------------------------------ -->
+
+        <hr>
+        <section class="text-gray-600 body-font">
+          <div class="container mx-auto flex px-1 py-10 items-center justify-center flex-col">
+           <u><h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Read & Listen Quran Online Para 7 </h1></u>
+            <div>
+            <video src="7.mp4" width="1200" controls></video></video>
+            </div>
+       
+            <!-- ------------------------------------8------------------------------------------ -->
+
+        <hr>
+        <section class="text-gray-600 body-font">
+          <div class="container mx-auto flex px-1 py-10 items-center justify-center flex-col">
+           <u><h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Read & Listen Quran Online Para 8 </h1></u>
+            <div>
+            <video src="8.mp4" width="1200" controls></video></video>
+            </div>
+
+            <!-- ------------------------------------9------------------------------------------ -->
+
+        <hr>
+        <section class="text-gray-600 body-font">
+          <div class="container mx-auto flex px-1 py-10 items-center justify-center flex-col">
+           <u><h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Read & Listen Quran Online Para 9 </h1></u>
+            <div>
+            <video src="9.mp4" width="1200" controls></video></video>
+            </div>
+
+            <!-- ------------------------------------10------------------------------------------ -->
+
+        <hr>
+        <section class="text-gray-600 body-font">
+          <div class="container mx-auto flex px-1 py-10 items-center justify-center flex-col">
+           <u><h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Read & Listen Quran Online Para 10 </h1></u>
+            <div>
+            <video src="10.mp4" width="1200" controls></video></video>
+            </div>
+
+
+
+      </body>
+</html>
